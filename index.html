@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>PROJECT 042</title>
+
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="style_snap.css" rel="stylesheet">
+
+    <style>
+        body,
+        div,
+        span,
+        li {
+            letter-spacing: 1px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        .nav-link,
+        .hero-title,
+        input,
+        textarea,
+        span,
+        th,
+        td,
+        label,
+        button,
+        a {
+            font-family: 'Impact', sans-serif !important;
+            letter-spacing: 2px;
+        }
+
+        .navbar>ul {
+            display: none !important;
+        }
+
+        .mobile-nav-toggle {
+            display: block !important;
+            font-size: 35px !important;
+            color: #f0f4f2 !important;
+            cursor: pointer !important;
+            z-index: 9999 !important;
+            position: fixed !important;
+            top: 20px !important;
+            right: 25px !important;
+        }
+
+        .navbar-mobile {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            background: rgba(0, 0, 0, 0.95) !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+
+        .navbar-mobile::before {
+            display: none !important;
+        }
+
+        .navbar-mobile ul {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 30px !important;
+            position: static !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            background: transparent !important;
+            box-shadow: none !important;
+            overflow-y: hidden !important;
+        }
+
+        .navbar-mobile a {
+            display: block !important;
+            color: #f0f4f2 !important;
+            font-size: 18px !important;
+            text-align: right !important;
+            text-transform: uppercase;
+        }
+
+        .navbar-mobile a:hover {
+            color: #666 !important;
+        }
+
+        #about-section {
+            background: #000402 !important;
+            min-height: 100vh;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            padding: 0 !important;
+        }
+
+        .about-layout {
+            max-width: 680px;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .about-title {
+            font-weight: 400 !important;
+            font-size: 2.8em !important;
+            color: #f0f4f2 !important;
+            letter-spacing: -0.5px !important;
+            margin-bottom: 15px !important;
+            text-transform: lowercase;
+        }
+
+        .about-desc {
+            font-weight: 300 !important;
+            font-size: 0.95em !important;
+            line-height: 2.1 !important;
+            color: #f0f4f2 !important;
+            letter-spacing: 0.2px !important;
+            text-align: center;
+        }
+
+        .live-feed-container {
+            max-height: 200px;
+            overflow-y: auto;
+            color-scheme: dark;
+            padding-right: 10px;
+        }
+
+        .form-control:focus {
+            box-shadow: none !important;
+            border-color: #ff3042 !important;
+            border-width: 3px !important;
+        }
+
+        iframe {
+            filter: invert(90%) hue-rotate(180deg) contrast(80%);
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="fixed-top">
+        <div class="container">
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link" href="#hero-section">HOME</a></li>
+                    <li><a class="nav-link" href="#about-section">ABOUT</a></li>
+                    <li><a class="nav-link" href="#login-section">Login</a></li>
+                    <li><a class="nav-link" href="#artists-matrix">ARTISTS HUB</a></li>
+                    <li><a class="nav-link" href="#crew-news">NEWS</a></li>
+                    <li><a class="nav-link" href="#crew-audition">AUDITION</a></li>
+                    <li><a class="nav-link" href="#artist-pricing">PRICING</a></li>
+                    <li><a class="nav-link" href="#location-contact">LOCATION</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+        </div>
+    </header>
+
+    <main id="snap-wrapper">
+
+        <section id="hero-section" class="hero route bg-image snap-section">
+            <video autoplay loop muted playsinline id="hero-video">
+                <source src="assets/video/bg-loop.mp4" type="video/mp4">
+            </video>
+
+            <div class="scanlines"></div>
+            <div class="hero-content display-table">
+                <div class="table-cell">
+                    <div class="container text-center">
+                        <img src="assets/img/042로고.png" alt="PROJECT 042 LOGO" class="img-fluid mb-4" style="max-width: 400px;">
+                        <p class="hero-subtitle"><span class="typed" data-typed-items="PROJECT 042, Creative Music Crew, Local Scene Hub"></span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-section" class="route snap-section">
+            <div class="about-layout">
+                <h2 class="about-title"> 0&2424</h2>
+                <p class="about-desc">
+                    project 042 is a multi-genre music and video group. we create, direct, produce, and edit all types of visual work as well as curate artists that derive from various musical backgrounds and influences. based in daejeon, our collective's main focus is to engage all audiences by actualizing a distinctive audiovisual experience
+                </p>
+            </div>
+        </section>
+
+        <section id="login-section" class="route snap-section" style="background: #000; padding: 100px 0;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-5 col-lg-4">
+                        <div class="title-box text-center mb-4">
+                            <h3 class="title-a text-white" style="letter-spacing: 2px;">SYSTEM_LOGIN</h3>
+                        </div>
+                        <div class="p-4 p-md-5" style="background:transparent;">
+                            <form onsubmit="event.preventDefault(); window.location.href='index.html';">
+                                <div class="mb-4">
+                                    <label class="form-label fw-bold" style="letter-spacing: 1px;">ID</label>
+                                    <input type="text" class="form-control py-2" required style="background: #f0f4f2; border: 1px solid #303432; color: #000402; border-radius: 0;">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label fw-bold" style="letter-spacing: 1px;">PASSWORD</label>
+                                    <input type="password" class="form-control py-2" required style="background: #f0f4f2; border: 1px solid #303432; color: #000402; border-radius: 0;">
+                                </div>
+                                <button type="submit" class="btn w-100 py-3 mt-2" style="background: #ff3042; color: #f0f4f2; font-weight: bold; border-radius: 0; letter-spacing: 2px; border: none; transition: 0.3s;">
+                                    ACCESS
+                                </button>
+                            </form>
+                            <div class="d-flex justify-content-between mt-4 pt-3 border-top border-dark">
+                                <a href="#signup" class="text-muted small text-decoration-none" style="transition: 0.3s;" onmouseover="this.style.color='#ff3042'" onmouseout="this.style.color='#6c757d'">
+                                    JOIN CREW
+                                </a>
+                                <a href="#find" class="text-muted small text-decoration-none" style="transition: 0.3s;" onmouseover="this.style.color='#ff3042'" onmouseout="this.style.color='#6c757d'">
+                                    LOST DATA?
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="artists-matrix" class="snap-section" style="padding: 0;">
+            <div class="matrix-viewport">
+                <div class="matrix-grid">
+
+                    <div class="matrix-cell portfolio-details" id="r1-c1">
+                        <button class="axis-arrow prev-arrow" onclick="document.getElementById('r1-c3').scrollIntoView({behavior: 'smooth'})"><i class="bi bi-chevron-left"></i> ARTIST 3</button>
+                        <button class="axis-arrow next-arrow" onclick="document.getElementById('r1-c2').scrollIntoView({behavior: 'smooth'})">ARTIST 2 <i class="bi bi-chevron-right"></i></button>
+                        <div class="container">
+                            <div class="row gy-4 gx-0 align-items-center">
+                                <div class="col-lg-6">
+                                    <img src="assets/img/artist1.png" alt="Artist 1 Poster" style="width: 90%; height: auto; max-height: 450px; object-fit: cover; display: block; margin-left: auto;">
+                                </div>
+                                <div class="col-lg-6 text-white">
+                                    <div class="portfolio-info" style="background: transparent !important; border: none !important; padding: 0 0 0 40px !important; margin: 0 !important; width: 100% !important; max-width: 100% !important; box-shadow: none !important;">
+                                        <h3 style="font-family: 'Impact', sans-serif !important; color: #f0f4f2 !important; font-size: 3rem; letter-spacing: 2px; margin-bottom: 15px; line-height: 1.1;">
+                                            Flossy
+                                        </h3>
+                                        <ul style="font-family: 'Impact', sans-serif !important; color: #f0f4f2 !important; font-size: 1.1rem; list-style: none; padding: 0; margin: 0; line-height: 1.8;">
+                                            <li><strong>Position:</strong> Rapper </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="matrix-cell portfolio-details" id="r1-c2">
+                        <button class="axis-arrow prev-arrow" onclick="document.getElementById('r1-c1').scrollIntoView({behavior: 'smooth'})"><i class="bi bi-chevron-left"></i> ARTIST 1</button>
+                        <button class="axis-arrow next-arrow" onclick="document.getElementById('r1-c3').scrollIntoView({behavior: 'smooth'})">ARTIST 3 <i class="bi bi-chevron-right"></i></button>
+                        <div class="container">
+                            <div class="row gy-4 gx-0 align-items-center">
+                                <div class="col-lg-6">
+                                    <img src="assets/img/artist2.png" alt="Artist 2 Poster" style="width: 90%; height: auto; max-height: 450px; object-fit: cover; display: block; margin-left: auto;">
+                                </div>
+                                <div class="col-lg-6 text-white">
+                                    <div class="portfolio-info" style="background: transparent !important; border: none !important; padding: 0 0 0 40px !important; margin: 0 !important; width: 100% !important; max-width: 100% !important; box-shadow: none !important;">
+                                        <h3 style="font-family: 'Impact', sans-serif !important; color: #f0f4f2 !important; font-size: 3rem; letter-spacing: 2px; margin-bottom: 15px; line-height: 1.1;">
+                                            Raygoated
+                                        </h3>
+                                        <ul style="font-family: 'Impact', sans-serif !important; color: #f0f4f2 !important; font-size: 1.1rem; list-style: none; padding: 0; margin: 0; line-height: 1.8;">
+                                            <li><strong>Position:</strong> Producer </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="matrix-cell portfolio-details" id="r1-c3">
+                        <button class="axis-arrow prev-arrow" onclick="document.getElementById('r1-c2').scrollIntoView({behavior: 'smooth'})"><i class="bi bi-chevron-left"></i> ARTIST 2</button>
+                        <button class="axis-arrow next-arrow" onclick="document.getElementById('r1-c1').scrollIntoView({behavior: 'smooth'})">ARTIST 1 <i class="bi bi-chevron-right"></i></button>
+                        <div class="container">
+                            <div class="row gy-4 gx-0 align-items-center">
+                                <div class="col-lg-6">
+                                    <img src="assets/img/artist3.jpg" alt="Artist 3 Poster" style="width: 80%; height: 80%; max-height: 600px; object-fit: cover; display: block; margin-left: auto;">
+                                </div>
+                                <div class="col-lg-6 text-white">
+                                    <div class="portfolio-info" style="background: transparent !important; border: none !important; padding: 0 0 0 40px !important; margin: 0 !important; width: 100% !important; max-width: 100% !important; box-shadow: none !important;">
+                                        <h3 style="font-family: 'Impact', sans-serif !important; color: #f0f4f2 !important; font-size: 3rem; letter-spacing: 2px; margin-bottom: 15px; line-height: 1.1;">
+                                            P3rcyGotGutz
+                                        </h3>
+                                        <ul style="font-family: 'Impact', sans-serif !important; color: #f0f4f2 !important; font-size: 1.1rem; list-style: none; padding: 0; margin: 0; line-height: 1.8;">
+                                            <li><strong>Position:</strong> Visual Artist</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="matrix-cell portfolio-mf" id="r2-c1">
+                        <button class="axis-arrow prev-arrow" onclick="document.getElementById('r2-c3').scrollIntoView({behavior: 'smooth'})"><i class="bi bi-chevron-left"></i> MEDIA 3</button>
+                        <button class="axis-arrow next-arrow" onclick="document.getElementById('r2-c2').scrollIntoView({behavior: 'smooth'})">MEDIA 2 <i class="bi bi-chevron-right"></i></button>
+                        <div class="container">
+                            <div class="row g-4" style="height: 70vh;">
+                                <div class="col-md-8">
+                                    <div class="w-100 mb-3" style="height: 100%; background: transparent; overflow: hidden; aspect-ratio: 16 / 9;">
+                                        <video controls title="Video player" poster="assets/img/3T-poster.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                                            <source src="assets/video/3T.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="w-100 p-3" style="height: 100%; background: transparent; color: #f0f4f2;">
+                                        <h3 class="border-bottom border-secondary pb-2" style="font-family: 'Impact', sans-serif !important; color: #f0f4f2;">[Flossy's Vault] </h3>
+                                        <div class="audio-box mb-1">
+                                            <p style="font-family: 'Impact', sans-serif; font-size: 0.9rem; margin-bottom: 2px; color:#fff;">01. 3T</p>
+                                            <audio controls style="width: 300px; height: 45px; filter: invert(1);">
+                                                <source src="assets/audio/track1.mp3" type="audio/mpeg">
+                                            </audio>
+                                        </div>
+                                        <div class="audio-box mb-1">
+                                            <p style="font-family: 'Impact', sans-serif; font-size: 0.9rem; margin-bottom: 2px; color:#fff;">02. Disease(unrealeased)</p>
+                                            <audio controls style="width: 300px; height: 45px; filter: invert(1);">
+                                                <source src="assets/audio/track2.mp3" type="audio/mpeg">
+                                            </audio>
+                                        </div>
+                                        <div class="audio-box mb-1">
+                                            <p style="font-family: 'Impact', sans-serif; font-size: 0.9rem; margin-bottom: 2px; color:#fff;">03. Go back(unrealeased)</p>
+                                            <audio controls style="width: 300px; height: 45px; filter: invert(1);">
+                                                <source src="assets/audio/track3.wav" type="audio/mpeg">
+                                            </audio>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="matrix-cell portfolio-mf" id="r2-c2">
+                        <button class="axis-arrow prev-arrow" onclick="document.getElementById('r2-c1').scrollIntoView({behavior: 'smooth'})"><i class="bi bi-chevron-left"></i> MEDIA 1</button>
+                        <button class="axis-arrow next-arrow" onclick="document.getElementById('r2-c3').scrollIntoView({behavior: 'smooth'})">MEDIA 3 <i class="bi bi-chevron-right"></i></button>
+                        <div class="container">
+                            <div class="row g-4" style="height: 70vh;">
+                                <div class="col-md-8">
+                                    <div class="w-100 mb-3" style="height: 100%; background: transparent; overflow: hidden; aspect-ratio: 16 / 9;">
+                                        <video controls title="Video player" poster="assets/img/Taste-poster.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                                            <source src="assets/video/Taste.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="w-100 p-3" style="height: 100%; background: transparent; color:#f0f4f2;">
+                                        <h3 class="border-bottom border-secondary pb-2" style="font-family: 'Impact', sans-serif !important; color: #f0f4f2;">[Raygoated's Vault] </h3>
+                                        <div class="audio-box mb-1">
+                                            <p style="font-family: 'Impact', sans-serif; font-size: 0.9rem; margin-bottom: 2px; color:#fff;">01. Taste(Reed.RayGoated) </p>
+                                            <audio controls style="width: 300px; height: 45px; filter: invert(1);">
+                                                <source src="assets/audio/track4.mp3" type="audio/mpeg">
+                                            </audio>
+                                        </div>
+                                        <div class="audio-box mb-1">
+                                            <p style="font-family: 'Impact', sans-serif; font-size: 0.9rem; margin-bottom: 2px; color:#fff;">02. Go back(prod.RayGoated)</p>
+                                            <audio controls style="width: 300px; height: 45px; filter: invert(1);">
+                                                <source src="assets/audio/track3.wav" type="audio/mpeg">
+                                            </audio>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="matrix-cell portfolio-mf" id="r2-c3">
+                        <button class="axis-arrow prev-arrow" onclick="document.getElementById('r2-c2').scrollIntoView({behavior: 'smooth'})"><i class="bi bi-chevron-left"></i> MEDIA 2</button>
+                        <button class="axis-arrow next-arrow" onclick="document.getElementById('r2-c1').scrollIntoView({behavior: 'smooth'})">MEDIA 1 <i class="bi bi-chevron-right"></i></button>
+                        <div class="container">
+                            <div class="row g-4" style="height: 70vh;">
+                                <div class="col-md-8">
+                                    <div class="w-100 mb-3" style="height: 100%; background: transparent; overflow: hidden; aspect-ratio: 16 / 9;">
+                                        <video controls title="Video player" poster="assets/img/Blur.png" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                                            <source src="assets/video/LoveBlur.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="w-100 p-3" style="height: 100%; background: transparent; color: #f0f4f2;">
+                                        <h3 class="border-bottom border-secondary pb-2" style="font-family: 'Impact', sans-serif !important; color: #f0f4f2;">[P3rcy's Vault] </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="matrix-cell" id="r3-c1">
+                        <button class="axis-arrow prev-arrow" onclick="document.getElementById('r3-c3').scrollIntoView({behavior: 'smooth'})" style="z-index: 10;"><i class="bi bi-chevron-left"></i> GB 3</button>
+                        <button class="axis-arrow next-arrow" onclick="document.getElementById('r3-c2').scrollIntoView({behavior: 'smooth'})" style="z-index: 10;">GB 2 <i class="bi bi-chevron-right"></i></button>
+                        <div class="container position-relative" style="z-index:2;">
+                            <div class="box-shadow-full" style="background:transparent;">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="title-box-2">
+                                            <h5 class="title-left text-white">Flossy GUESTBOOK</h5>
+                                        </div>
+                                        <form class="php-email-form">
+                                            <div class="row g-3">
+                                                <div class="col-md-12"><textarea class="form-control" rows="8" placeholder="COMMENT" style="resize:none;"></textarea></div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-6 text-white border-start border-secondary ps-4">
+                                        <div class="title-box-2">
+                                            <h5 class="title-left text-white">FEEDBACK</h5>
+                                        </div>
+                                        <div class="live-feed-container">
+                                            <p class="text-muted small">Amazing track! Can't wait for the next album release.</p>
+                                            <p class="text-muted small">3T beat drop goes absolutely crazy. 🔥</p>
+                                            <p class="text-muted small">: Putting 042 on the map fr. Let me know when the next local gig is happening.</p>
+                                            <p class="text-muted small">Heard 'Disease' live and ascended. Please drop the official audio already. 😩</p>
+                                            <p class="text-muted small">The sound texture is so clean. Taking mad inspiration from this. Good luck on the EU tour!</p>
+                                            <p class="text-muted small">The background visuals in the MV are too tough. Crew identity is so distinct.</p>
+                                            <p class="text-muted small">Putting 042 on the map fr. Let me know when the next local gig is happening</p>
+                                            <p class="text-muted small">The background visuals in the MV are too tough. Crew identity is so distinct</p>
+                                            <p class="text-muted small">3T beat drop goes absolutely crazy.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="matrix-cell" id="r3-c2">
+                        <button class="axis-arrow prev-arrow" onclick="document.getElementById('r3-c1').scrollIntoView({behavior: 'smooth'})" style="z-index: 10;"><i class="bi bi-chevron-left"></i> GB 1</button>
+                        <button class="axis-arrow next-arrow" onclick="document.getElementById('r3-c3').scrollIntoView({behavior: 'smooth'})" style="z-index: 10;">GB 3 <i class="bi bi-chevron-right"></i></button>
+                        <div class="container position-relative" style="z-index:2;">
+                            <div class="box-shadow-full" style="background:transparent;">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="title-box-2">
+                                            <h5 class="title-left text-white">RayGoated GUESTBOOK</h5>
+                                        </div>
+                                        <form class="php-email-form">
+                                            <div class="row g-3">
+                                                <div class="col-md-12"><textarea class="form-control" rows="8" placeholder="COMMENT" style="resize:none;"></textarea></div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-6 text-white border-start border-secondary ps-4">
+                                        <div class="title-box-2">
+                                            <h5 class="title-left text-white">FEEDBACK</h5>
+                                        </div>
+                                        <div class="live-feed-container">
+                                            <p class="text-muted small">Amazing track! Can't wait for the next album release.</p>
+                                            <p class="text-muted small">3T beat drop goes absolutely crazy. 🔥</p>
+                                            <p class="text-muted small">Putting 042 on the map fr. Let me know when the next local gig is happening.</p>
+                                            <p class="text-muted small">Heard 'Disease' live and ascended. Please drop the official audio already. 😩</p>
+                                            <p class="text-muted small">The sound texture is so clean. Taking mad inspiration from this. Good luck on the EU tour!</p>
+                                            <p class="text-muted small">The background visuals in the MV are too tough. Crew identity is so distinct.</p>
+                                            <p class="text-muted small">Putting 042 on the map fr. Let me know when the next local gig is happening</p>
+                                            <p class="text-muted small">The background visuals in the MV are too tough. Crew identity is so distinct</p>
+                                            <p class="text-muted small">3T beat drop goes absolutely crazy.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="matrix-cell" id="r3-c3">
+                        <button class="axis-arrow prev-arrow" onclick="document.getElementById('r3-c2').scrollIntoView({behavior: 'smooth'})" style="z-index: 10;"><i class="bi bi-chevron-left"></i> GB 2</button>
+                        <button class="axis-arrow next-arrow" onclick="document.getElementById('r3-c1').scrollIntoView({behavior: 'smooth'})" style="z-index: 10;">GB 1 <i class="bi bi-chevron-right"></i></button>
+                        <div class="container position-relative" style="z-index:2;">
+                            <div class="box-shadow-full" style="background:transparent;">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="title-box-2">
+                                            <h5 class="title-left text-white">P3rcy GUESTBOOK</h5>
+                                        </div>
+                                        <form class="php-email-form">
+                                            <div class="row g-3">
+                                                <div class="col-md-12"><textarea class="form-control" rows="8" placeholder="COMMENT" style="resize:none;"></textarea></div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-6 text-white border-start border-secondary ps-4">
+                                        <div class="title-box-2">
+                                            <h5 class="title-left text-white">FEEDBACK</h5>
+                                        </div>
+                                        <div class="live-feed-container">
+                                            <p class="text-muted small">Amazing track! Can't wait for the next album release.</p>
+                                            <p class="text-muted small">3T beat drop goes absolutely crazy. 🔥</p>
+                                            <p class="text-muted small">Putting 042 on the map fr. Let me know when the next local gig is happening.</p>
+                                            <p class="text-muted small">Heard 'Disease' live and ascended. Please drop the official audio already. 😩</p>
+                                            <p class="text-muted small">The sound texture is so clean. Taking mad inspiration from this. Good luck on the EU tour!</p>
+                                            <p class="text-muted small">The background visuals in the MV are too tough. Crew identity is so distinct.</p>
+                                            <p class="text-muted small">Putting 042 on the map fr. Let me know when the next local gig is happening</p>
+                                            <p class="text-muted small">The background visuals in the MV are too tough. Crew identity is so distinct</p>
+                                            <p class="text-muted small">3T beat drop goes absolutely crazy.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="crew-news" class="blog-mf route snap-section">
+            <div class="container">
+                <div class="title-box text-center mb-4">
+                    <h3 class="title-a text-white">Crew News</h3>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="p-4" style="background: Transparent; ">
+                            <ul class="list-unstyled text-white m-0">
+                                <div class="p-4" style="background: Transparent; ">
+                                    <div class="list-unstyled text-white m-0">
+                                        <div class="mb-3 border-bottom border-dark pb-2">
+                                            <div class="d-flex align-items-center" data-bs-toggle="collapse" data-bs-target="#newsDetail1" style="cursor: pointer;">
+                                                <span class="badge bg-secondary me-3" style="background:#f0f4f2 !important; color:#000402;">2026.07.12</span>
+                                                <span class="text-white hover-red">[TOUR] Project 042 Live Tour Line-Up Open</span>
+                                            </div>
+                                            <div class="collapse mt-3" id="newsDetail1">
+                                                <div class="p-3 text-muted small" style="background: #000402; border-left: 2px solid #ff3042;">
+                                                    <p class="mb-2" style="color: #f0f4f2;">042 크루의 첫 번째 투어 라인업이 마침내 공개되었습니다.</p>
+                                                    <p class="mb-0" style="color: #f0f4f2;">[Tour Dates]<br>08.15 : London, UK<br>08.18 : Paris, FR<br>08.21 : Berlin, DE</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 border-bottom border-dark pb-2">
+                                            <div class="d-flex align-items-center" data-bs-toggle="collapse" data-bs-target="#newsDetail2" style="cursor: pointer;">
+                                                <span class="badge bg-secondary me-3" style="background:#f0f4f2 !important; color:#000;">2026.01.02</span>
+                                                <span class="text-white hover-red">2026 042 크루 지원</span>
+                                            </div>
+                                            <div class="collapse mt-3" id="newsDetail2">
+                                                <div class="p-3 text-muted small" style="background: #000402; border-left: 2px solid #ff3042;">
+                                                    <p class="mb-0" style="color: #f0f4f2;">[042 크루 지원 시작했습니다!]<br>크루원 모집 합니다!<br>포지션: 프로듀서<br>* 웹사이트를 통해 지원하세요.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 border-bottom border-dark pb-2">
+                                            <div class="d-flex align-items-center" data-bs-toggle="collapse" data-bs-target="#newsDetail3" style="cursor: pointer;">
+                                                <span class="badge bg-secondary me-3" style="background:#f0f4f2 !important; color:#000;">2026.07.12</span>
+                                                <span class="text-white hover-red">[TOUR] Project 042 Europe Live Tour Line-Up Open</span>
+                                            </div>
+                                            <div class="collapse mt-3" id="newsDetail3">
+                                                <div class="p-3 text-muted small" style="background: #000402; border-left: 2px solid #ff3042;">
+                                                    <p class="mb-2" style="color: #f0f4f2;">042 크루의 첫 번째 유럽 투어 라인업이 마침내 공개되었습니다.</p>
+                                                    <p class="mb-0" style="color: #f0f4f2;">[Tour Dates]<br>08.15 : London, UK<br>08.18 : Paris, FR<br>08.21 : Berlin, DE</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="crew-audition" class="route snap-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="box-shadow-full p-4 p-md-5" style="background: transparent; border: 1px solid #202422;">
+                            <div class="title-box-2 text-center mb-4">
+                                <h1 class="title-center text-white m-0">APPLY FORM</h1>
+                            </div>
+                            <form class="php-email-form" onsubmit="event.preventDefault(); alert('Your form has been submitted');">
+                                <input type="text" class="form-control mb-3" placeholder="NAME" required style="background: #f0f4f2;  color: #000402;">
+                                <input type="text" class="form-control mb-3" placeholder="POSITION" required style="background: #f0f4f2;  color: #000402;">
+                                <textarea class="form-control mb-4" rows="6" required placeholder="Describe Yourself" style="background: #f0f4f2;  color: #000402;"></textarea>
+                                <button type="submit" class="btn btn-primary w-100 py-3 mt-2" style="background:#fff; color:#000; border:none; font-weight:bold; letter-spacing: 1px;">
+                                    SUBMIT APPLICATION
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="artist-pricing" class="services-mf route snap-section">
+            <div class="container">
+                <div class="title-box text-center mb-5">
+                    <h3 class="title-a text-white">Artist Pricing</h3>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <div class="table-responsive mb-4">
+                            <table class="table text-white m-0 align-middle" style="border-color: #202422;">
+                                <thead style="background: transparent; font-size: 0.85rem; letter-spacing: 1px;">
+                                    <tr>
+                                        <th class="p-3 border-dark" style="width: 20%;">ARTIST</th>
+                                        <th class="p-3 border-dark" style="width: 30%;">SERVICE TYPE</th>
+                                        <th class="p-3 border-dark" style="width: 35%;">FORMAT / DETAILS</th>
+                                        <th class="p-3 border-dark" style="width: 15%;">PRICE</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-muted small">
+                                    <tr>
+                                        <td class="p-3 border-dark text-white fw-bold">Flossy</td>
+                                        <td class="p-3 border-dark">Feature Verse</td>
+                                        <td class="p-3 border-dark">16 Bars / Hook (Negotiable)</td>
+                                        <td class="p-3 border-dark">TBD</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 border-dark text-white fw-bold">RayGoated</td>
+                                        <td class="p-3 border-dark">Beat License</td>
+                                        <td class="p-3 border-dark">MP3 / WAV / Trackouts (Exclusive available)</td>
+                                        <td class="p-3 border-dark">TBD</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 border-dark text-white fw-bold">P3rcyGotGutz</td>
+                                        <td class="p-3 border-dark">Music Video Production</td>
+                                        <td class="p-3 border-dark">Directing, Filming, Edit & Color Grading</td>
+                                        <td class="p-3 border-dark">TBD</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="text-center mt-5">
+                            <a href="mailto:team042@gmail.com?subject=[INQUIRY] 042 Crew Booking &body= 1. Name / Team : %0D%0A2.  Artist : %0D%0A3. Format / Details : %0D%0A4. Price :" class="btn px-5 py-3" style="background: #ff3042; color: #fff; font-weight: bold; border-radius: 0; letter-spacing: 1px; border: 1px solid #ff3042; transition: all 0.3s ease;">
+                                SEND INQUIRY
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="location-contact" class="route snap-section">
+            <div class="container d-flex flex-column justify-content-between py-4">
+                <div class="box-shadow-full mb-auto" style="background: transparent; width:100%;">
+                    <div class="title-box-2 mb-3">
+                        <h5 class="title-left text-white">LOCATION</h5>
+                    </div>
+                    <div style="height: 400px; background: transparent; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d803.3990465098731!2d127.37717905803648!3d36.34633554427073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35654be388001c77%3A0x9b9877fcd6293d!2z64yA7KCE6rSR7Jet7IucIOyEnOq1rCDrjIDrjZXrjIDroZwxNjLrsojquLggMzMgM-y4tQ!5e0!3m2!1sko!2skr!4v1781324241008!5m2!1sko!2skr" width="1200" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <footer style="background: transparent; border-top: 2px solid #ff3042; padding: 3rem 0;">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                                <h4 class="text-white fw-bold m-0" style="letter-spacing: 2px;">042 CREW</h4>
+                                <p class="text-muted small m-0 mt-1">Based in Daejeon. Visuals & Sounds.</p>
+                            </div>
+                            <div class="col-md-4 text-center mb-3 mb-md-0">
+                                <div class="socials-footer">
+                                    <a href="#" class="text-white me-3" style="font-size: 1.2rem; transition: 0.3s;" onmouseover="this.style.color='#ff3042'"><i class="bi bi-instagram"></i></a>
+                                    <a href="#" class="text-white me-3" style="font-size: 1.2rem; transition: 0.3s;" onmouseover="this.style.color='#ff3042'"><i class="bi bi-youtube"></i></a>
+                                    <a href="#" class="text-white" style="font-size: 1.2rem; transition: 0.3s;" onmouseover="this.style.color='#ff3042'"><i class="bi bi-spotify"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center text-md-end">
+                                <p class="text-muted small m-0">© 2026 <strong>042 CREW</strong>. All Rights Reserved.</p>
+                                <p class="text-muted m-0" style="font-size: 0.75rem;">Designed by You</p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.navbar a');
+            const toggleBtn = document.querySelector('.mobile-nav-toggle');
+            const navbar = document.querySelector('#navbar');
+
+            navLinks.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                    if (navbar.classList.contains('navbar-mobile') && toggleBtn) {
+                        toggleBtn.click();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
