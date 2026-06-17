@@ -42,6 +42,13 @@
             letter-spacing: 2px;
         }
 
+        @font-face {
+            font-family: 'S-CoreDream-Heavy';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-9Black.woff') format('woff');
+            font-weight: 900;
+            font-style: normal;
+        }
+
         .navbar>ul {
             display: none !important;
         }
@@ -176,19 +183,43 @@
             <video autoplay loop muted playsinline id="hero-video">
                 <source src="assets/video/bg-loop.mp4" type="video/mp4">
             </video>
+            <div style="position: absolute; top: 25px; left: 25px; z-index: 10;">
+                <div data-bs-toggle="collapse" data-bs-target="#guideHero" role="button" style="cursor: pointer; font-family: 'Impact', sans-serif; color: #f0f4f2; font-weight: bold; letter-spacing: 1px;">
+                    HELP 
+                </div>
+                <div class="collapse" id="guideHero">
+                    <div class="pt-1 small" style="background: transparent; max-width: 450px;">
+                        <p class="m-0" style="color: #f0f4f2; font-family: 'S-CoreDream-Heavy', sans-serif; font-weight: bold; line-height: 1.4;">
+                            042 크루 메인페이지입니다.<br>스크롤하여 다음 구역으로 이동하거나<br>우측 상단 메뉴를 이용해 주세요.
+                        </p>
+                    </div>
+                </div> 
+            </div>
 
             <div class="scanlines"></div>
             <div class="hero-content display-table">
                 <div class="table-cell">
                     <div class="container text-center">
                         <img src="assets/img/042로고.png" alt="PROJECT 042 LOGO" class="img-fluid mb-4" style="max-width: 400px;">
-                        <p class="hero-subtitle"><span class="typed" data-typed-items="PROJECT 042, Creative Music Crew, Local Scene Hub"></span></p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="about-section" class="route snap-section">
+            <div style="position: absolute; top: 25px; left: 25px; z-index: 10;">
+                <div data-bs-toggle="collapse" data-bs-target="#guideAbout" role="button" style="cursor: pointer; font-family: 'Impact', sans-serif; color: #f0f4f2; font-weight: bold; letter-spacing: 1px;">
+                    HELP 
+                </div>
+                <div class="collapse" id="guideAbout">
+                    <div class="pt-1 small" style="background: transparent; max-width: 450px;">
+                        <p class="m-0" style="color: #f0f4f2; font-family: 'S-CoreDream-Heavy', sans-serif; font-weight: bold; line-height: 1.4;">
+                            042 크루 소개페이지입니다.<br>읽으신 후 스크롤하여 다음 구역으로 이동하거나<br>우측 상단 메뉴를 이용해 주세요.
+                        </p>
+                    </div>
+                </div> 
+            </div>
+            
             <div class="about-layout">
                 <h2 class="about-title"> 0&2424</h2>
                 <p class="about-desc">
@@ -197,7 +228,20 @@
             </div>
         </section>
 
-        <section id="login-section" class="route snap-section" style="background: #000; padding: 100px 0;">
+        <section id="login-section" class="route snap-section" style="background: #000; padding: 100px 0; position: relative;">
+            <div style="position: absolute; top: 25px; left: 25px; z-index: 10;">
+                <div data-bs-toggle="collapse" data-bs-target="#guideLogin" role="button" style="cursor: pointer; font-family: 'Impact', sans-serif; color: #f0f4f2; font-weight: bold; letter-spacing: 1px;">
+                    HELP 
+                </div>
+                <div class="collapse" id="guideLogin">
+                    <div class="pt-1 small" style="background: transparent; max-width: 450px;">
+                        <p class="m-0" style="color: #f0f4f2; font-family: 'S-CoreDream-Heavy', sans-serif; font-weight: bold; line-height: 1.4;">
+                            시스템 로그인 및 크루 지원 구역입니다.<br>ID와 PASSWORD를 입력하여 접속하거나<br>하단 링크를 통해 지원 페이지로 이동하세요.
+                        </p>
+                    </div>
+                </div> 
+            </div>
+
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-5 col-lg-4">
@@ -232,7 +276,20 @@
             </div>
         </section>
 
-        <section id="artists-matrix" class="snap-section" style="padding: 0;">
+        <section id="artists-matrix" class="snap-section" style="padding: 0; position: relative;">
+            <div style="position: absolute; top: 25px; left: 25px; z-index: 100;">
+                <div data-bs-toggle="collapse" data-bs-target="#guideMatrix" role="button" style="cursor: pointer; font-family: 'Impact', sans-serif; color: #f0f4f2; font-weight: bold; letter-spacing: 1px;">
+                    HELP 
+                </div>
+                <div class="collapse" id="guideMatrix">
+                    <div class="pt-1 small" style="background: transparent; max-width: 450px;">
+                        <p class="m-0" style="color: #f0f4f2; font-family: 'S-CoreDream-Heavy', sans-serif; font-weight: bold; line-height: 1.4;">
+                            042 아티스트 허브입니다.<br>화면의 좌우 화살표를 클릭하여<br>아티스트를 탐색하세요.<br>스크롤 하여 해당 아티스트의 미디어와<br>방명록을 사용하실 수 있습니다.
+                        </p>
+                    </div>
+                </div> 
+            </div>
+
             <div class="matrix-viewport">
                 <div class="matrix-grid">
 
@@ -494,7 +551,20 @@
             </div>
         </section>
 
-        <section id="crew-news" class="blog-mf route snap-section">
+        <section id="crew-news" class="blog-mf route snap-section" style="position: relative;">
+            <div style="position: absolute; top: 25px; left: 25px; z-index: 10;">
+                <div data-bs-toggle="collapse" data-bs-target="#guideNews" role="button" style="cursor: pointer; font-family: 'Impact', sans-serif; color: #f0f4f2; font-weight: bold; letter-spacing: 1px;">
+                    HELP 
+                </div>
+                <div class="collapse" id="guideNews">
+                    <div class="pt-1 small" style="background: transparent; max-width: 450px;">
+                        <p class="m-0" style="color: #f0f4f2; font-family: 'S-CoreDream-Heavy', sans-serif; font-weight: bold; line-height: 1.4;">
+                            042 크루의 소식 및 뉴스 피드입니다.<br>각 항목의 제목을 클릭하여 내용을 확인하세요.
+                        </p>
+                    </div>
+                </div> 
+            </div>
+
             <div class="container">
                 <div class="title-box text-center mb-4">
                     <h3 class="title-a text-white">Crew News</h3>
@@ -506,7 +576,7 @@
                                 
                                 <div class="mb-3 border-bottom border-dark pb-2">
                                     <div class="d-flex align-items-center" data-bs-toggle="collapse" data-bs-target="#newsDetail1" style="cursor: pointer;">
-                                        <span class="badge bg-secondary me-3" style="background:#f0f4f2 !important; color:#000402;">2026.07.12</span>
+                                        <span class="badge b6g-secondary me-3" style="background:#f0f4f2 !important; color:#000402;">2026.07.12</span>
                                         <span class="text-white">[TOUR] Project 042 Live Tour Line-Up Open</span>
                                     </div>
                                     <div class="collapse mt-3" id="newsDetail1">
@@ -549,7 +619,20 @@
             </div>
         </section>
 
-        <section id="crew-audition" class="route snap-section">
+        <section id="crew-audition" class="route snap-section" style="position: relative;">
+            <div style="position: absolute; top: 25px; left: 25px; z-index: 10;">
+                <div data-bs-toggle="collapse" data-bs-target="#guideAudition" role="button" style="cursor: pointer; font-family: 'Impact', sans-serif; color: #f0f4f2; font-weight: bold; letter-spacing: 1px;">
+                    HELP 
+                </div>
+                <div class="collapse" id="guideAudition">
+                    <div class="pt-1 small" style="background: transparent; max-width: 450px;">
+                        <p class="m-0" style="color: #f0f4f2; font-family: 'S-CoreDream-Heavy', sans-serif; font-weight: bold; line-height: 1.4;">
+                            042 크루 온라인 지원 폼입니다.<br>양식을 작성한 후 하단의 SUBMIT 버튼을 눌러 제출하세요.
+                        </p>
+                    </div>
+                </div> 
+            </div>
+
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-8">
@@ -561,7 +644,7 @@
                                 <input type="text" class="form-control mb-3" placeholder="NAME" required style="background: #f0f4f2;  color: #000402;">
                                 <input type="text" class="form-control mb-3" placeholder="POSITION" required style="background: #f0f4f2;  color: #000402;">
                                 <textarea class="form-control mb-4" rows="6" required placeholder="Describe Yourself" style="background: #f0f4f2;  color: #000402;"></textarea>
-                                <button type="submit" class="btn btn-primary w-100 py-3 mt-2" style="background:#fff; color:#000; border:none; font-weight:bold; letter-spacing: 1px;">
+                                <button type="submit" class="btn btn-primary w-100 py-3 mt-2" style="background: #ff3042; color: #f0f4f2; border:none; font-weight:bold; letter-spacing: 1px;">
                                     SUBMIT APPLICATION
                                 </button>
                             </form>
@@ -569,9 +652,22 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>5
 
-        <section id="artist-pricing" class="services-mf route snap-section">
+        <section id="artist-pricing" class="services-mf route snap-section" style="position: relative;">
+            <div style="position: absolute; top: 25px; left: 25px; z-index: 10;">
+                <div data-bs-toggle="collapse" data-bs-target="#guidePricing" role="button" style="cursor: pointer; font-family: 'Impact', sans-serif; color: #f0f4f2; font-weight: bold; letter-spacing: 1px;">
+                    HELP 
+                </div>
+                <div class="collapse" id="guidePricing">
+                    <div class="pt-1 small" style="background: transparent; max-width: 450px;">
+                        <p class="m-0" style="color: #f0f4f2; font-family: 'S-CoreDream-Heavy', sans-serif; font-weight: bold; line-height: 1.4;">
+                            아티스트 서비스 가격표입니다.<br>세부 사항 확인 후 하단의 INQUIRY를 클릭해 문의하세요.
+                        </p>
+                    </div>
+                </div> 
+            </div>
+
             <div class="container">
                 <div class="title-box text-center mb-5">
                     <h3 class="title-a text-white">Artist Pricing</h3>
@@ -611,7 +707,7 @@
                             </table>
                         </div>
                         <div class="text-center mt-5">
-                            <a href="mailto:team042@gmail.com?subject=[INQUIRY] 042 Crew Booking &body= 1. Name / Team : %0D%0A2.  Artist : %0D%0A3. Format / Details : %0D%0A4. Price :" class="btn px-5 py-3" style="background: #ff3042; color: #fff; font-weight: bold; border-radius: 0; letter-spacing: 1px; border: 1px solid #ff3042; transition: all 0.3s ease;">
+                            <a href="mailto:team042@gmail.com?subject=[INQUIRY] 042 Crew Booking &body= 1. Name / Team : %0D%0A2.  Artist : %0D%0A3. Format / Details : %0D%0A4. Price :" class="btn px-5 py-3" style="background: #ff3042; color: #f0f4f2; font-weight: bold; border-radius: 0; letter-spacing: 1px; border: 1px solid #ff3042; transition: all 0.3s ease;">
                                 SEND INQUIRY
                             </a>
                         </div>
@@ -620,7 +716,20 @@
             </div>
         </section>
 
-        <section id="location-contact" class="route snap-section">
+        <section id="location-contact" class="route snap-section" style="position: relative;">
+            <div style="position: absolute; top: 25px; left: 25px; z-index: 10;">
+                <div data-bs-toggle="collapse" data-bs-target="#guideLocation" role="button" style="cursor: pointer; font-family: 'Impact', sans-serif; color: #f0f4f2; font-weight: bold; letter-spacing: 1px;">
+                    HELP 
+                </div>
+                <div class="collapse" id="guideLocation">
+                    <div class="pt-1 small" style="background: transparent; max-width: 450px;">
+                        <p class="m-0" style="color: #f0f4f2; font-family: 'S-CoreDream-Heavy', sans-serif; font-weight: bold; line-height: 1.4;">
+                            042 크루 위치 및 연락처입니다.<br>지도를 클릭해 위치를 확인하실 수 있습니다.
+                        </p>
+                    </div>
+                </div> 
+            </div>
+
             <div class="container d-flex flex-column justify-content-between py-4">
                 <div class="box-shadow-full mb-auto" style="background: transparent; width:100%;">
                     <div class="title-box-2 mb-3">
@@ -632,21 +741,14 @@
                 </div>
                 <footer style="background: transparent; border-top: 2px solid #ff3042; padding: 3rem 0;">
                     <div class="container">
-                        <div class="row align-items-center">
+                        <div class="row align-items-center justify-content-between">
                             <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
                                 <h4 class="text-white fw-bold m-0" style="letter-spacing: 2px;">042 CREW</h4>
                                 <p class="text-muted small m-0 mt-1">Based in Daejeon. Visuals & Sounds.</p>
                             </div>
-                            <div class="col-md-4 text-center mb-3 mb-md-0">
-                                <div class="socials-footer">
-                                    <a href="#" class="text-white me-3" style="font-size: 1.2rem; transition: 0.3s;" onmouseover="this.style.color='#ff3042'"><i class="bi bi-instagram"></i></a>
-                                    <a href="#" class="text-white me-3" style="font-size: 1.2rem; transition: 0.3s;" onmouseover="this.style.color='#ff3042'"><i class="bi bi-youtube"></i></a>
-                                    <a href="#" class="text-white" style="font-size: 1.2rem; transition: 0.3s;" onmouseover="this.style.color='#ff3042'"><i class="bi bi-spotify"></i></a>
-                                </div>
-                            </div>
                             <div class="col-md-4 text-center text-md-end">
                                 <p class="text-muted small m-0">© 2026 <strong>042 CREW</strong>. All Rights Reserved.</p>
-                                <p class="text-muted m-0" style="font-size: 0.75rem;">Designed by You</p>
+                                <p class="text-muted m-0" style="font-size: 0.75rem;">Designed by P3rcyGotGutz</p>
                             </div>
                         </div>
                     </div>
@@ -682,3 +784,4 @@
 </body>
 
 </html>
+
